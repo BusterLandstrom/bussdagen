@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Amazing Website</title>
+        <script>
+            function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+            function ran_col() {
+                var color = '#';
+                var letters = ['000000','FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF','C0C0C0','0C0F0C','A0D0A0']; 
+                color += letters[Math.floor(Math.random() * letters.length)];
+                document.getElementById('body').style.background = color;
+            }
+            function reset_col(){
+                var color = '#';
+                var letters = ['0002'];
+                color += letters[Math.floor(Math.random() * letters.length)];
+                document.getElementById('body').style.background = color;
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body id='body'>
+        <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="">Hem</a>
+  <a href="services.html">Services</a>
+  <a href="#">Clients</a>
+  <a href="contact.html">Contact</a>
+</div>
+        <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Öppna</span>
+</div>
+        <main>
+            <header>
+                <form>
+                <input type="image" alt="parentos" class="parents" src="FreddanOMarsan.jpg" onClick="window.location.href='FreddanOMarsan.jpg'">
+                </form>
+                <br/>
+                <input class='logo' alt="centrumdok" type="image" src="centrum.png" onClick="window.open('http://www.centrumdoktorn.se/')" />
+                <h1>
+                    Viktor Landström
+                </h1>
+            </header>
+            <section>
+                <h2>
+                    Välkommen till min sida
+                </h2>
+                <p>
+                    Jag gjorde den här sidan på 50 sekunder
+                    <br/>Byt färg på hemsidan
+                    <br/><button type="button" onClick="ran_col()" class="change">Change Color</button>
+                    <br/><button type="button" onClick="reset_col()" class="reset">Reset Color</button>
+                </p>
+            </section>
+        </main>
+    </body>
+</html>
