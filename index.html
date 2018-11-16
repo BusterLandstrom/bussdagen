@@ -26,6 +26,19 @@ function closeNav() {
                 color += letters[Math.floor(Math.random() * letters.length)];
                 document.getElementById('body').style.background = color;
             }
+            window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
         </script>
         <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"> 
         <meta charset="UTF-8">
@@ -37,24 +50,20 @@ function closeNav() {
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="">Hem</a>
   <a href="services.html">Services</a>
-  <a href="#">Clients</a>
-  <a href="contact.html">Contact</a>
+  <a href="contact.html">Kontakta/Om</a>
 </div>
         <div id="main">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Öppna</span>
 </div>
         <main>
             <header>
-                <form>
-                <input type="image" alt="parentos" class="parents" src="FreddanOMarsan.jpg" onClick="window.location.href='FreddanOMarsan.jpg'">
-                </form>
-                <br/>
                 <input class='logo' alt="centrumdok" type="image" src="centrum.png" onClick="window.open('http://www.centrumdoktorn.se/')" />
                 <h1>
-                    Viktor Landström
+                    
                 </h1>
             </header>
             <section>
+                <br/><img src="centrumdokmvg.jpeg" class="mvg">
                 <h2>
                     Välkommen till min sida
                 </h2>
@@ -64,6 +73,7 @@ function closeNav() {
                     <br/><button type="button" onClick="ran_col()" class="change">Change Color</button>
                     <br/><button type="button" onClick="reset_col()" class="reset">Reset Color</button>
                 </p>
+                <input type="image" onclick="topFunction()" id="myBtn" title="Go to top" class="upbutton" src="uparrow.png"> 
             </section>
         </main>
     </body>
